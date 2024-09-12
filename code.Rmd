@@ -1,0 +1,21 @@
+---
+title: "My Interactive Plot"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Interactive Plotly Plot
+
+This is an interactive plot created using Plotly.
+
+```{r plotly-plot, echo=FALSE}
+library(plotly)
+
+# Create a sample plot using plotly
+data <- data.frame(
+  x = c(1, 2, 3, 4),
+  y = c(10, 11, 12, 13)
+)
+
+plot_ly(data, x = ~x, y = ~y, type = 'scatter', mode = 'lines+markers')
